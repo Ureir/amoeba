@@ -13,3 +13,8 @@
 #define fprintf	fprint
 
 #define FILE	File
+
+#include <stdarg.h>
+
+void fprint(File *f, char *fmt, ...);
+void fprintv(File *f, char *fmt, va_list args);

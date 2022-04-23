@@ -7,7 +7,7 @@
 
 #include "em_private.h"
 
-
+void
 CC_dnam(str, val)
 	char *str;
 	arith val;

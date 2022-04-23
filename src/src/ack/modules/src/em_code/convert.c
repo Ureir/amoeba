@@ -24,12 +24,13 @@
 #include        <em_ptyp.h>
 #include	<em.h>
 #include	<em_comp.h>
+#include        "em_private.h"
+#include        <print.h>
 
 char *filename;			/* Name of input file */
 int errors;			/* Number of errors */
 
-main(argc,argv)
-	char **argv;
+int main(int argc, char **argv)
 {
 	struct e_instr buf;
 	register struct e_instr *p = &buf;
@@ -64,26 +65,40 @@ main(argc,argv)
 	}
 	C_close();
 	EM_close();
-	exit(errors);
+	return errors;
 }
 
 /* VARARGS */
-error(s,a1,a2,a3,a4)
-	char *s;
+void
+errorv(char *s, va_list v)
 {
 	fprint(STDERR,
 		"%s, line %d: ",
 		filename ? filename : "standard input",
 		EM_lineno);
-	fprint(STDERR,s,a1,a2,a3,a4);
+	fprintv(STDERR,s,v);
 	fprint(STDERR, "\n");
 	errors++;
 }
 
-/* VARARGS */
-fatal(s,a1,a2,a3,a4)
-	char *s;
+void
+error(char *s, ...)
 {
-	error(s,a1,a2,a3,a4);
+        va_list vl;
+
+        va_start(vl,s);
+        errorv(s, vl);
+        va_end(vl);
+}
+
+/* VARARGS */
+void
+fatal(char *s,...)
+{
+        va_list vl;
+
+        va_start(vl,s);
+        errorv(s, vl);
+        va_end(vl);
 	exit(1);
 }

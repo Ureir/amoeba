@@ -14,6 +14,7 @@ char *
 st_alloc(phead, size, count)
 	char **phead;
 	register unsigned int size;
+	int count;
 {
 	register char *p;
 	register long *q;

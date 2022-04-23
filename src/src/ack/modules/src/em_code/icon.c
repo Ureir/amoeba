@@ -7,7 +7,7 @@
 
 #include "em_private.h"
 
-
+void
 CC_icon(val, siz)
 	char *val;
 	arith siz;

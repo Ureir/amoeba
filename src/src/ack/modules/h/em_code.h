@@ -15,3 +15,8 @@
 #include "em_codeEK.h"
 #endif
 #endif
+#include <stdarg.h>
+
+void error(char *s, ...);
+
+void errorva(char *s, va_list *va);

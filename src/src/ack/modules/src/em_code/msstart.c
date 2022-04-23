@@ -7,7 +7,7 @@
 
 #include "em_private.h"
 
-
+void
 CC_msstart(cst)
 	int cst;
 {

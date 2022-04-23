@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Kernel" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/debug/lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="buld/Debug" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/release/lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="build/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add directory="../h" />
+			<Add directory="../h/machdep/arch/i80386" />
+			<Add directory="../h/sys" />
+			<Add directory="../h/server" />
+			<Add directory="../h/toolset/gnu-2" />
+			<Add directory="../../templates/kernel/ibm_at" />
+		</Compiler>
+		<Unit filename="Amake.srclist" />
+		<Unit filename="machdep/arch/i80386/Amake.srclist" />
+		<Unit filename="machdep/arch/i80386/as.S" />
+		<Unit filename="machdep/arch/i80386/interrupt.S" />
+		<Unit filename="machdep/arch/i80386/kgdb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/arch/i80386/kgdb.init" />
+		<Unit filename="machdep/arch/i80386/kgdb.kstat" />
+		<Unit filename="machdep/arch/i80386/lintlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/arch/i80386/misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/arch/i80386/misc.kstat" />
+		<Unit filename="machdep/arch/i80386/syscall.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/arch/i80386/tables.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/arch/i80386/trap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/arch/i80386/trap.kstat" />
+		<Unit filename="machdep/dev/generic/Amake.srclist" />
+		<Unit filename="machdep/dev/generic/barelance.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/bullet_load.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/eadrfilt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/ethercrc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/filt_eaddr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/filtabyte.h" />
+		<Unit filename="machdep/dev/generic/glance.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/glance.h" />
+		<Unit filename="machdep/dev/generic/glance.kstat" />
+		<Unit filename="machdep/dev/generic/glastat.h" />
+		<Unit filename="machdep/dev/generic/gsm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/host_getlab.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/lance.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/lance.h" />
+		<Unit filename="machdep/dev/generic/lance.init" />
+		<Unit filename="machdep/dev/generic/lance.kstat" />
+		<Unit filename="machdep/dev/generic/lance.stop" />
+		<Unit filename="machdep/dev/generic/noether.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/noether.init" />
+		<Unit filename="machdep/dev/generic/ramdisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/scsicommon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/scsicommon.h" />
+		<Unit filename="machdep/dev/generic/sd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/sd.h" />
+		<Unit filename="machdep/dev/generic/st.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/generic/st.h" />
+		<Unit filename="machdep/dev/generic/tape_loader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/3c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/3c.h" />
+		<Unit filename="machdep/dev/ibm_at/3c.kstat" />
+		<Unit filename="machdep/dev/ibm_at/Amake.srclist" />
+		<Unit filename="machdep/dev/ibm_at/aha154X.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/aha154X.h" />
+		<Unit filename="machdep/dev/ibm_at/am2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/asy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/asy.h" />
+		<Unit filename="machdep/dev/ibm_at/badblk.h" />
+		<Unit filename="machdep/dev/ibm_at/cmos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/cmos.h" />
+		<Unit filename="machdep/dev/ibm_at/cmos.init" />
+		<Unit filename="machdep/dev/ibm_at/console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/console.h" />
+		<Unit filename="machdep/dev/ibm_at/console.init" />
+		<Unit filename="machdep/dev/ibm_at/diskdep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/dma.h" />
+		<Unit filename="machdep/dev/ibm_at/dma.init" />
+		<Unit filename="machdep/dev/ibm_at/eth_bcopy.S" />
+		<Unit filename="machdep/dev/ibm_at/floppy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/floppy.h" />
+		<Unit filename="machdep/dev/ibm_at/floppy.init" />
+		<Unit filename="machdep/dev/ibm_at/floppy_load.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/gdp8390.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/gdp8390.h" />
+		<Unit filename="machdep/dev/ibm_at/gdp8390.kstat" />
+		<Unit filename="machdep/dev/ibm_at/i386_proto.h" />
+		<Unit filename="machdep/dev/ibm_at/iop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/isa.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/kernelport.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/keyboard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/keyboard.h" />
+		<Unit filename="machdep/dev/ibm_at/kgdbio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/mouse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/mouse.h" />
+		<Unit filename="machdep/dev/ibm_at/ndp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/ndp.init" />
+		<Unit filename="machdep/dev/ibm_at/ne.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/nmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/pic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/pic.h" />
+		<Unit filename="machdep/dev/ibm_at/pic.init" />
+		<Unit filename="machdep/dev/ibm_at/pic.stop" />
+		<Unit filename="machdep/dev/ibm_at/picintr.S" />
+		<Unit filename="machdep/dev/ibm_at/pit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/pit.h" />
+		<Unit filename="machdep/dev/ibm_at/pit.init" />
+		<Unit filename="machdep/dev/ibm_at/printer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/printer.init" />
+		<Unit filename="machdep/dev/ibm_at/sd.h" />
+		<Unit filename="machdep/dev/ibm_at/wd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/wini.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/dev/ibm_at/wini.h" />
+		<Unit filename="machdep/dev/ibm_at/wini.stop" />
+		<Unit filename="machdep/mmu/i80386/Amake.srclist" />
+		<Unit filename="machdep/mmu/i80386/bootkernel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/mmu/i80386/khead.S" />
+		<Unit filename="machdep/mmu/i80386/lintlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/mmu/i80386/mm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="machdep/mmu/i80386/mmu.init" />
+		<Unit filename="machdep/mmu/i80386/mmu.stop" />
+		<Unit filename="protocol/amoeba4/Amake.srclist" />
+		<Unit filename="protocol/amoeba4/portcach.kstat" />
+		<Unit filename="protocol/amoeba4/portcache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/amoeba4/portcache.init" />
+		<Unit filename="protocol/amoeba4/trans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/amoeba4/trans.init" />
+		<Unit filename="protocol/amoeba4/trans.kstat" />
+		<Unit filename="protocol/amoeba4/transparam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/Amake.srclist" />
+		<Unit filename="protocol/flip/amoeba4rpc/Amake.srclist" />
+		<Unit filename="protocol/flip/amoeba4rpc/am4glue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/amoeba4rpc/am4glue.init" />
+		<Unit filename="protocol/flip/amoeba4rpc/am4glue.kstat" />
+		<Unit filename="protocol/flip/grp/Amake.srclist" />
+		<Unit filename="protocol/flip/grp/flgroup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgroup.init" />
+		<Unit filename="protocol/flip/grp/flgrp_alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_alloc.h" />
+		<Unit filename="protocol/flip/grp/flgrp_header.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_header.h" />
+		<Unit filename="protocol/flip/grp/flgrp_hist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_hist.h" />
+		<Unit filename="protocol/flip/grp/flgrp_hstpro.h" />
+		<Unit filename="protocol/flip/grp/flgrp_malloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_malloc.h" />
+		<Unit filename="protocol/flip/grp/flgrp_marsh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_marsh.h" />
+		<Unit filename="protocol/flip/grp/flgrp_member.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_member.h" />
+		<Unit filename="protocol/flip/grp/flgrp_pr.kstat" />
+		<Unit filename="protocol/flip/grp/flgrp_print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/grp/flgrp_st.kstat" />
+		<Unit filename="protocol/flip/grp/flgrp_type.h" />
+		<Unit filename="protocol/flip/grp/grp_endian.h" />
+		<Unit filename="protocol/flip/network/Amake.srclist" />
+		<Unit filename="protocol/flip/network/flipeth.kstat" />
+		<Unit filename="protocol/flip/network/flipether.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/network/flipether.init" />
+		<Unit filename="protocol/flip/network/smif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/network/smif.init" />
+		<Unit filename="protocol/flip/network/smif.kstat" />
+		<Unit filename="protocol/flip/raw/Amake.srclist" />
+		<Unit filename="protocol/flip/raw/rawflip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/raw/rawflip.init" />
+		<Unit filename="protocol/flip/raw/rawflip.kstat" />
+		<Unit filename="protocol/flip/rpc/Amake.srclist" />
+		<Unit filename="protocol/flip/rpc/am_endian.h" />
+		<Unit filename="protocol/flip/rpc/flrpc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/rpc/flrpc.init" />
+		<Unit filename="protocol/flip/rpc/flrpc.kstat" />
+		<Unit filename="protocol/flip/rpc/flrpc_kd.kstat" />
+		<Unit filename="protocol/flip/rpc/flrpc_kid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/rpc/flrpc_kid.h" />
+		<Unit filename="protocol/flip/rpc/flrpc_kid.init" />
+		<Unit filename="protocol/flip/rpc/flrpc_port.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/rpc/flrpc_pt.init" />
+		<Unit filename="protocol/flip/rpc/flrpc_pt.kstat" />
+		<Unit filename="protocol/flip/rpc/rpc_endian.h" />
+		<Unit filename="protocol/flip/sys/Amake.srclist" />
+		<Unit filename="protocol/flip/sys/flcache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/flip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/flip.init" />
+		<Unit filename="protocol/flip/sys/flip.kstat" />
+		<Unit filename="protocol/flip/sys/flip_conf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/fragment.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/fragment.kstat" />
+		<Unit filename="protocol/flip/sys/interfac-prv.h" />
+		<Unit filename="protocol/flip/sys/interfac.init" />
+		<Unit filename="protocol/flip/sys/interfac.kstat" />
+		<Unit filename="protocol/flip/sys/interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/measure.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/measure.init" />
+		<Unit filename="protocol/flip/sys/measure.kstat" />
+		<Unit filename="protocol/flip/sys/pktprt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/routtab.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/flip/sys/routtab.h" />
+		<Unit filename="protocol/flip/sys/routtab.init" />
+		<Unit filename="protocol/flip/sys/routtab.kstat" />
+		<Unit filename="protocol/flip/sys/switch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/generic/Amake.srclist" />
+		<Unit filename="protocol/generic/README" />
+		<Unit filename="protocol/generic/ethif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/generic/ethif.init" />
+		<Unit filename="protocol/generic/ethif.kstat" />
+		<Unit filename="protocol/generic/ethif.stop" />
+		<Unit filename="protocol/generic/packet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="protocol/generic/packet.kstat" />
+		<Unit filename="protocol/generic/protostack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bootuser/Amake.srclist" />
+		<Unit filename="server/bootuser/bootuser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bootuser/bootuser.init" />
+		<Unit filename="server/bullet/Amake.srclist" />
+		<Unit filename="server/bullet/alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/alloc.h" />
+		<Unit filename="server/bullet/b_misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/bs_adm_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/bs_protos.h" />
+		<Unit filename="server/bullet/bs_std_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/bs_user_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/bullet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/bullet.init" />
+		<Unit filename="server/bullet/bullet_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/cache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/cache.h" />
+		<Unit filename="server/bullet/inode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/kernel_dep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/new_file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/preempt.h" />
+		<Unit filename="server/bullet/readwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/bullet/stats.h" />
+		<Unit filename="server/bullet/user_dep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/directory/Amake.srclist" />
+		<Unit filename="server/directory/direct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/directory/direct.init" />
+		<Unit filename="server/disk/Amake.srclist" />
+		<Unit filename="server/disk/dkl_misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/disk/virdisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/disk/virdisk.init" />
+		<Unit filename="server/flip_ip/Amake.srclist" />
+		<Unit filename="server/flip_ip/flip_ip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/flip_ip/flip_ip.h" />
+		<Unit filename="server/flip_ip/flip_ip.init" />
+		<Unit filename="server/flip_ip/flip_ip_svr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/Amake.srclist" />
+		<Unit filename="server/gbullet/aging.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/aging.h" />
+		<Unit filename="server/gbullet/alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/alloc.h" />
+		<Unit filename="server/gbullet/b_misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/bs_adm_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/bs_protos.h" />
+		<Unit filename="server/gbullet/bs_std_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/bs_user_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/bullet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/bullet.init" />
+		<Unit filename="server/gbullet/bullet_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/cache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/cache.h" />
+		<Unit filename="server/gbullet/event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/event.h" />
+		<Unit filename="server/gbullet/grp_adm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/grp_bullet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/grp_bullet.h" />
+		<Unit filename="server/gbullet/grp_comm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/grp_comm.h" />
+		<Unit filename="server/gbullet/grp_defs.h" />
+		<Unit filename="server/gbullet/grp_impl.h" />
+		<Unit filename="server/gbullet/gs_adm_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/gs_std_cmds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/inode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/kernel_dep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/member.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/new_file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/preempt.h" />
+		<Unit filename="server/gbullet/readwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/replic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/shuffle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/gbullet/stats.h" />
+		<Unit filename="server/gbullet/user_dep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/iop/Amake.srclist" />
+		<Unit filename="server/iop/iopsvr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/iop/iopsvr.init" />
+		<Unit filename="server/ip/Amake.srclist" />
+		<Unit filename="server/ip/amoeba_dep/Amake.srclist" />
+		<Unit filename="server/ip/amoeba_dep/am_eth.h" />
+		<Unit filename="server/ip/amoeba_dep/am_proto.h" />
+		<Unit filename="server/ip/amoeba_dep/am_sr.h" />
+		<Unit filename="server/ip/amoeba_dep/amoeba_incl.h" />
+		<Unit filename="server/ip/amoeba_dep/args.h" />
+		<Unit filename="server/ip/amoeba_dep/buf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/amoeba_dep/clock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/amoeba_dep/conf_gw.h" />
+		<Unit filename="server/ip/amoeba_dep/const.h" />
+		<Unit filename="server/ip/amoeba_dep/event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/amoeba_dep/inet_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/amoeba_dep/inet_config.h" />
+		<Unit filename="server/ip/amoeba_dep/ioctl.h" />
+		<Unit filename="server/ip/amoeba_dep/oneC_sum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/amoeba_dep/sr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/amoeba_dep/tcpip_errno.h" />
+		<Unit filename="server/ip/amoeba_dep/va_dcl.h" />
+		<Unit filename="server/ip/generic/arp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/arp.h" />
+		<Unit filename="server/ip/generic/assert.h" />
+		<Unit filename="server/ip/generic/buf.h" />
+		<Unit filename="server/ip/generic/clock.h" />
+		<Unit filename="server/ip/generic/eth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/eth.h" />
+		<Unit filename="server/ip/generic/eth_int.h" />
+		<Unit filename="server/ip/generic/event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/event.h" />
+		<Unit filename="server/ip/generic/icmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/icmp.h" />
+		<Unit filename="server/ip/generic/icmp_lib.h" />
+		<Unit filename="server/ip/generic/io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/io.h" />
+		<Unit filename="server/ip/generic/ip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ip.h" />
+		<Unit filename="server/ip/generic/ip_eth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ip_int.h" />
+		<Unit filename="server/ip/generic/ip_ioctl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ip_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ip_ps.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ip_read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ip_write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ipr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/ipr.h" />
+		<Unit filename="server/ip/generic/psip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/psip.h" />
+		<Unit filename="server/ip/generic/sr.h" />
+		<Unit filename="server/ip/generic/tcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/tcp.h" />
+		<Unit filename="server/ip/generic/tcp_int.h" />
+		<Unit filename="server/ip/generic/tcp_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/tcp_recv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/tcp_send.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/type.h" />
+		<Unit filename="server/ip/generic/udp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/generic/udp.h" />
+		<Unit filename="server/ip/kernel_dep/Amake.srclist" />
+		<Unit filename="server/ip/kernel_dep/am_eh_glue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/kernel_dep/am_eth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/kernel_dep/am_kern_glue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/kernel_dep/eh.init" />
+		<Unit filename="server/ip/kernel_dep/eh_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/kernel_dep/inet.h" />
+		<Unit filename="server/ip/kernel_dep/osdep_eth.h" />
+		<Unit filename="server/ip/kernel_dep/tcp_delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/kernel_dep/tcp_dlay.kstat" />
+		<Unit filename="server/ip/kernel_dep/tcpip.init" />
+		<Unit filename="server/ip/kernel_dep/tcpip_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/user_dep/Amake.srclist" />
+		<Unit filename="server/ip/user_dep/am_eth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/user_dep/am_user_glue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/user_dep/bprintf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/user_dep/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/ip/user_dep/nw_task.h" />
+		<Unit filename="server/ip/user_dep/osdep_eth.h" />
+		<Unit filename="server/printbuf/Amake.srclist" />
+		<Unit filename="server/printbuf/pbsvr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/printbuf/pbsvr.init" />
+		<Unit filename="server/process/Amake.srclist" />
+		<Unit filename="server/process/control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/process/exception.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/process/map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/process/proc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/process/proc.init" />
+		<Unit filename="server/process/procdefs.h" />
+		<Unit filename="server/profile/Amake.srclist" />
+		<Unit filename="server/profile/prof_svr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/profile/prof_svr.init" />
+		<Unit filename="server/profile/userprof.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/random/Amake.srclist" />
+		<Unit filename="server/random/rndtask.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/random/rndtask.init" />
+		<Unit filename="server/syssvr/Amake.srclist" />
+		<Unit filename="server/syssvr/syssvr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/syssvr/syssvr.init" />
+		<Unit filename="server/tape/Amake.srclist" />
+		<Unit filename="server/tape/tape.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tape/tape.init" />
+		<Unit filename="server/tod/Amake.srclist" />
+		<Unit filename="server/tod/todtask.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tod/todtask.init" />
+		<Unit filename="server/tty/Amake.srclist" />
+		<Unit filename="server/tty/input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tty/ioctl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tty/iotask.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tty/output.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tty/queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="server/tty/tty.init" />
+		<Unit filename="server/tty/ttyint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/Amake.srclist" />
+		<Unit filename="sys/assert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/global.init" />
+		<Unit filename="sys/global.stop" />
+		<Unit filename="sys/kips.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/kips.init" />
+		<Unit filename="sys/kparam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/kparam.init" />
+		<Unit filename="sys/lintlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/main.init" />
+		<Unit filename="sys/main.kstat" />
+		<Unit filename="sys/malloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/mpx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/mpx.init" />
+		<Unit filename="sys/printbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/printbuf.init" />
+		<Unit filename="sys/printf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/random.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/random.init" />
+		<Unit filename="sys/random.kstat" />
+		<Unit filename="sys/seg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/seg.init" />
+		<Unit filename="sys/sweeper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/sweeper.kstat" />
+		<Unit filename="sys/system.kstat" />
+		<Unit filename="sys/task.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sys/taskswitch.S" />
+		<Unit filename="sys/thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -297,3 +297,16 @@
 #ifndef sp_icon
 #include <em_spec.h>
 #endif
+
+void CC_bhcst(int op, arith n, arith w, int i);
+void CC_bhdnam(int op, arith n, char *s, arith sz, int i);
+void CC_bhdlb(int op, arith n, label s, arith off, int i);
+void CC_bhicon(int op, arith n, char *s, arith sz, int i);
+void CC_bhilb(int op, arith n, label l, int i);
+void CC_bhfcon(int op, arith n, char *s, arith sz, int i);
+void CC_bhpnam(int op, arith n, char *p, int i);
+void CC_bhucon(int op, arith n, char *s, arith sz, int i);
+void CC_end(arith l);
+void CC_endnarg(void);
+void CC_exc(arith c1, arith c2);
+void CC_msstart(int cst);

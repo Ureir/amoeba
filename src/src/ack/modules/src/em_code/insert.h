@@ -60,7 +60,7 @@ extern long
 extern char	*C_opp;
 #define C_BASE 0
 #endif
-extern int (*C_outpart)(), (*C_swtout)(), (*C_swttmp)();
+extern void (*C_outpart)(int id), (*C_swtout)(), (*C_swttmp)();
 
 extern File	*C_ofp;
 
@@ -72,5 +72,7 @@ extern char	*C_tmpfile;
 extern char	*C_top;
 extern char	*C_ibuf;
 
-#define put(c)	if (C_opp == C_top) C_flush(); *C_opp++ = (c)
+#define put(c)	if (C_opp == C_top) C_flush(); *C_opp++ = (char)(c)
 
+void C_failed(void);
+void C_flush(void);

@@ -8,8 +8,9 @@
 */
 
 #include <system.h>
+#include <string.h>
 
-static
+static void
 wr_num(fd, n)
 	File *fd;
 	int n;
@@ -24,9 +25,8 @@ wr_num(fd, n)
 	sys_write(fd, s, 1);
 }
 
-_BadAssertion(file, lineno, assertion)
-	char *file, *assertion;
-	int lineno;
+void
+_BadAssertion(char *file, int lineno, char *assertion)
 {
 
 	sys_write(STDERR, file, strlen(file));

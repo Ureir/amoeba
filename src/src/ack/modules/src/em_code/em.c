@@ -10,13 +10,14 @@
 */
 #include <alloc.h>
 #include <em_arith.h>
+#include <string.h>
 #include "insert.h"
 #include "em_private.h"
 
 int		C_ontmpfile = 0;
 int		C_sequential = 1;
 Part		*C_curr_part;
-int		(*C_outpart)(), (*C_swtout)(), (*C_swttmp)();
+void		(*C_outpart)(int id), (*C_swtout)(), (*C_swttmp)();
 
 #ifdef INCORE
 char		*C_BASE;
@@ -46,7 +47,8 @@ char		*C_current_out = obuf;
 char		*C_opp = obuf;
 #endif
 
-C_flush() {
+void
+C_flush(void) {
 #ifdef INCORE
 	static unsigned int bufsiz;
 
@@ -78,6 +80,7 @@ C_flush() {
 #define Xputbyte(c) put(c)
 #endif
 
+void
 C_putbyte(c)
 	int c;
 {
@@ -89,11 +92,15 @@ C_putbyte(c)
 #endif
 
 /*ARGSUSED*/
+void
 C_init(w, p)
 	arith w, p;
 {
+        (void)w; /* Avoid warning */
+        (void)p;
 }
 
+int
 C_open(nm)
 	char *nm;
 {
@@ -108,6 +115,7 @@ C_open(nm)
 	return 1;
 }
 
+void
 C_close()
 {
 	/*	Finish the code-generation.
@@ -142,6 +150,7 @@ C_close()
 	C_ofp = 0;
 }
 
+int
 C_busy()
 {
 	return C_ofp != 0; /* true if code is being generated */
@@ -171,6 +180,7 @@ wrs(s)
 	}
 }
 
+void
 C_pt_dnam(s)
 	char *s;
 {
@@ -240,6 +250,7 @@ C_pt_dlb(l)
 	wrs(buf);
 }
 
+void
 C_pt_doff(l, v)
 	label l;
 	arith v;
@@ -311,7 +322,7 @@ C_pt_ccend() { C_putbyte('?'); }
 	Block Structured Languages" par. 11.2 for the meaning of these
 	names.
 */
-
+void
 C_magic()
 {
 	put16(sp_magic);
@@ -321,6 +332,7 @@ C_magic()
 #define	fit16i(x)	((x) >= (long)0xFFFF8000 && (x) <= (long)0x00007FFF)
 #define	fit8u(x)	((x) <= 0xFF)		/* x is already unsigned */
 
+void
 C_pt_ilb(l)
 	register label l;
 {
@@ -334,6 +346,7 @@ C_pt_ilb(l)
 	}
 }
 
+void
 C_pt_dlb(l)
 	register label l;
 {
@@ -347,6 +360,7 @@ C_pt_dlb(l)
 	}
 }
 
+void
 C_pt_cst(l)
 	register arith l;
 {
@@ -367,6 +381,7 @@ C_pt_cst(l)
 	}
 }
 
+void
 C_pt_doff(l, v)
 	label l;
 	arith v;
@@ -381,6 +396,7 @@ C_pt_doff(l, v)
 	}
 }
 
+void
 C_pt_noff(s, v)
 	char *s;
 	arith v;
@@ -395,6 +411,7 @@ C_pt_noff(s, v)
 	}
 }
 
+void
 C_pt_dnam(s)
 	char *s;
 {
@@ -402,6 +419,7 @@ C_pt_dnam(s)
 	C_pt_str(s);
 }
 
+void
 C_pt_pnam(s)
 	char *s;
 {
@@ -409,6 +427,7 @@ C_pt_pnam(s)
 	C_pt_str(s);
 }
 
+void
 C_pt_wcon(sp, v, sz)	/* sp_icon, sp_ucon or sp_fcon with int repr	*/
 	int sp;
 	char *v;
@@ -420,6 +439,7 @@ C_pt_wcon(sp, v, sz)	/* sp_icon, sp_ucon or sp_fcon with int repr	*/
 	C_pt_str(v);
 }
 
+void
 C_pt_str(s)
 	register char *s;
 {
@@ -431,6 +451,7 @@ C_pt_str(s)
 	}
 }
 
+void
 C_pt_scon(b, n)
 	register char *b;
 	register arith n;

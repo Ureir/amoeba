@@ -64,3 +64,19 @@
 #define	C_pt_op(x)	C_putbyte(x)
 #define	C_pt_ps(x)	C_putbyte(x)
 #endif /* READABLE_EM */
+
+void C_pt_cst(arith l);
+void C_pt_dlb(label l);
+void C_pt_dnam(char *s);
+void C_pt_doff(label l, arith v);
+void C_pt_ilb(label l);
+void C_pt_noff(char *s, arith v);
+void C_pt_pnam(char *s);
+void C_pt_scon(register char *b, register arith n);
+void C_pt_str(register char *s);
+void C_pt_wcon(int sp, char *v, arith sz);
+void C_putbyte(int c);
+
+void C_internal_error(void);
+
+void fatal(char *s, ...);

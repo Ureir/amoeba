@@ -45,3 +45,12 @@ extern File _sys_ftab[];
 /* system's idea of block */
 #define BUFSIZ	1024
 #endif /* __SYSTEM_INCLUDED__ */
+
+int sys_write(File *fp, char *bufptr, int nbytes);
+int sys_stop(int how);
+int sys_open(char *path, int flag, File **filep);
+void sys_close(register File *fp);
+
+/* Standard prototypes from stdlib */
+extern void abort(void);
+extern void exit(int);

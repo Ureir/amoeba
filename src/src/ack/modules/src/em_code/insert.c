@@ -18,6 +18,7 @@
 #include <em_path.h>
 #include <alloc.h>
 #include "insert.h"
+#include "em_private.h"
 
 char		*C_tmpdir = TMP_DIR;
 static Part	*C_stable[TABSIZ];
@@ -62,10 +63,10 @@ getbyte(b)
 }
 #endif
 
-static C_out_parts();
+static void C_out_parts(PartOfPart *pp);
 static Part *C_findpart();
 
-static
+static void
 outpart(id)
 	int id;
 {
@@ -76,7 +77,7 @@ outpart(id)
 	if (p) C_out_parts(p->p_parts);
 }
 
-static
+static void
 C_out_parts(pp)
 	register PartOfPart *pp;
 {
@@ -136,7 +137,7 @@ C_findpart(part)
 
 extern char	*strcpy(), *strcat(), *mktemp();
 
-static
+static void
 swttmp()
 {
 #ifndef INCORE
@@ -178,7 +179,7 @@ swttmp()
 #endif
 }
 
-static
+static void
 swtout()
 {
 #ifndef INCORE
@@ -251,7 +252,7 @@ mkpart(part)
 	*/
 	register Part *p = C_findpart(part);
 	register int index = part % TABSIZ;
-	
+
 	if (p != 0) {
 		/* multiple defined part ... */
 		C_internal_error();
@@ -267,7 +268,7 @@ mkpart(part)
 	return p;
 }
 
-static
+static void
 end_partofpart(p)
 	register Part *p;
 {
@@ -286,7 +287,7 @@ end_partofpart(p)
 	}
 }
 
-static
+static void
 resume(p)
 	register Part *p;
 {
@@ -303,6 +304,7 @@ resume(p)
 	pp->pp_begin = C_current_out - C_BASE;
 }
 
+void
 C_insertpart(part)
 	int part;
 {
@@ -341,6 +343,7 @@ C_insertpart(part)
 	resume(p);
 }
 
+void
 C_beginpart(part)
 	int part;
 {
@@ -360,6 +363,7 @@ C_beginpart(part)
 	resume(p);
 }
 
+void
 C_endpart(part)
 	int part;
 {

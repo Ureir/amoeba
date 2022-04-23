@@ -6,8 +6,7 @@
 /* return length of s
 */
 int
-strlen(s)
-	char *s;
+strlen(char *s)
 {
 	register char *b = s;
 

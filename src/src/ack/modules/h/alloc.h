@@ -18,6 +18,8 @@
 */
 
 extern char *Salloc(), *Malloc(), *Srealloc(), *Realloc();
+extern void No_Mem(void);
+
 #if defined(__STDC__) || defined(AMOEBA)
 #include <stdlib.h>
 #else
@@ -29,6 +31,8 @@ extern char *malloc(), *realloc();
 typedef struct _ALLOC_ {
 	struct _ALLOC_ *_A_next;
 } *_PALLOC_;
+
+extern char	*st_alloc();
 
 #define	_A_st_free(ptr, phead, size)	(((_PALLOC_)ptr)->_A_next = \
 						(_PALLOC_)(*phead), \

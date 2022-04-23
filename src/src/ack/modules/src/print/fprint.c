@@ -22,16 +22,18 @@
 	%[uxbo] = unsigned int
 	%d = int
 $ */
-#ifdef __STDC__
-fprint(File *fp, char *fmt, ...)
-#else
-fprint(fp, fmt, va_alist) File *fp; char *fmt; va_dcl
-#endif
+fprintv(File *fp, char *fmt, va_list args)
 {
-	va_list args;
 	char buf[SSIZE];
 
-	va_dostart(args, fmt);
 	sys_write(fp, buf, _format(buf, fmt, args));
+}
+
+fprint(File *fp, char *fmt, ...)
+{
+	va_list args;
+
+	va_dostart(args, fmt);
+	fprintv(fp, fmt, args);
 	va_end(args);
 }

@@ -4,18 +4,18 @@
  * For full copyright and restrictions on use see the file COPYRIGHT in the
  * top level of the Amoeba distribution.
  */
-
+#include <system.h>
 #include <em_arith.h>
 #include <em_label.h>
 #include <em_comp.h>
 #include <em_pseu.h>
 #include <em_flag.h>
 #include <em_ptyp.h>
-#include <em_private.h>
+#include "em_private.h"
 
 
-static arg();
-static pseudo();
+static void arg(register struct e_instr *p, int comma);
+static void pseudo(register struct e_instr *p);
 
 extern char em_flag[];
 char *C_error;
@@ -87,14 +87,13 @@ C_out(p)
 	return 1;
 }
 
-static
-arg(p, comma)
-	register struct e_instr *p;
+static void
+arg(register struct e_instr *p, int comma)
 {
 	/*	Output the argument of "p".
 	*/
 
-	if (comma) COMMA();
+	if (comma) {COMMA();}
 
 	switch(p->em_argtype) {
 	case 0:
@@ -150,7 +149,7 @@ arg(p, comma)
 	}
 }
 
-static
+static void
 pseudo(p)
 	register struct e_instr *p;
 {

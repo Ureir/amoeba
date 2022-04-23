@@ -5,6 +5,7 @@
  */
 #include	<system.h>
 
+void
 No_Mem()
 {
 	sys_write(STDERR, "Out of memory\n", 14);

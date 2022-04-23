@@ -54,13 +54,13 @@ checkarg(arg, typset)
 	}
 	return 1;
 }
-#else not CHECKING
+#else /* not CHECKING */
 #define checkarg(arg, x) 1
-#endif CHECKING
+#endif /* CHECKING */
 
 /*	EM_doinstr: An EM instruction
 */
-PRIVATE
+PRIVATE void
 EM_doinstr(p)
 	register struct e_instr *p;
 {
@@ -74,7 +74,7 @@ EM_doinstr(p)
 			return;
 		}
 	}
-#endif CHECKING
+#endif /* CHECKING */
 	switch(parametertype) {
 		case PAR_NO:
 			break;
@@ -88,12 +88,12 @@ EM_doinstr(p)
 				if (! checkarg(&(p->em_arg), cst_ptyp)) return;
 			}
 			else {
-#include "C_mnem_narg"
+//#include "C_mnem_narg"
 				return;
 			}
 			break;
 	}
-#include "C_mnem"
+//#include "C_mnem"
 }
 
 PRIVATE

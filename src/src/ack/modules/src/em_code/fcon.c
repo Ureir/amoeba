@@ -7,7 +7,7 @@
 
 #include "em_private.h"
 
-
+void
 CC_fcon(val, siz)
 	char *val;
 	arith siz;

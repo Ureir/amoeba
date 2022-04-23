@@ -7,6 +7,7 @@
 */
 
 /* instead of Calloc: */
+void
 clear(ptr, n)
 	register char *ptr;
 	register unsigned int n;

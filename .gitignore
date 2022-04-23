@@ -1,0 +1,6 @@
+*.o
+*.depend
+*.layout
+*.i
+*.s
+*.a

@@ -6,7 +6,7 @@
 /*	botch - write garbage over a chunk of memory, useful if you want
 		to check if freed memory is used inappopriately.
 */
-
+void
 botch(ptr, n)
 	register char *ptr;
 	register unsigned int n;

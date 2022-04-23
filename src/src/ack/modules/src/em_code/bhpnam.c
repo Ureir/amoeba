@@ -7,11 +7,8 @@
 
 #include "em_private.h"
 
-
-CC_bhpnam(op, n, p, i)
-	arith n;
-	char *p;
-	int i;
+void
+CC_bhpnam(int op, arith n, char *p, int i)
 {
 	/*	BSS or HOL with size n, initial value a PNAM(p),
 		and flag i

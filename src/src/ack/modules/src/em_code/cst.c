@@ -7,9 +7,8 @@
 
 #include "em_private.h"
 
-
-CC_cst(l)
-	arith l;
+void
+CC_cst(arith l)
 {
 	COMMA();
 	CST(l);

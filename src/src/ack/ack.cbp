@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ACK" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/FS" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="build/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/FS" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="build/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="-fno-builtin" />
+			<Add option="-DPRIVATE=static" />
+			<Add option="-DEXPORT=" />
+			<Add directory="h" />
+			<Add directory="modules/h" />
+		</Compiler>
+		<Unit filename="h/arch.h" />
+		<Unit filename="h/as_spec.h" />
+		<Unit filename="h/bc_io.h" />
+		<Unit filename="h/bc_string.h" />
+		<Unit filename="h/cg_pattern.h" />
+		<Unit filename="h/cgg_cg.h" />
+		<Unit filename="h/em_abs.h" />
+		<Unit filename="h/em_ego.h" />
+		<Unit filename="h/em_flag.h" />
+		<Unit filename="h/em_mes.h" />
+		<Unit filename="h/em_mnem.h" />
+		<Unit filename="h/em_path.h" />
+		<Unit filename="h/em_pseu.h" />
+		<Unit filename="h/em_ptyp.h" />
+		<Unit filename="h/em_reg.h" />
+		<Unit filename="h/em_spec.h" />
+		<Unit filename="h/local.h" />
+		<Unit filename="h/m2_traps.h" />
+		<Unit filename="h/ocm_chan.h" />
+		<Unit filename="h/ocm_parco.h" />
+		<Unit filename="h/ocm_proc.h" />
+		<Unit filename="h/out.h" />
+		<Unit filename="h/pc_err.h" />
+		<Unit filename="h/pc_file.h" />
+		<Unit filename="h/pc_size.h" />
+		<Unit filename="h/ranlib.h" />
+		<Unit filename="h/stb.h" />
+		<Unit filename="modules/h/alloc.h" />
+		<Unit filename="modules/h/assert.h" />
+		<Unit filename="modules/h/em.h" />
+		<Unit filename="modules/h/emO_code.h" />
+		<Unit filename="modules/h/em_arith.h" />
+		<Unit filename="modules/h/em_code.h" />
+		<Unit filename="modules/h/em_codeCE.h" />
+		<Unit filename="modules/h/em_codeEK.h" />
+		<Unit filename="modules/h/em_codeO.h" />
+		<Unit filename="modules/h/em_comp.h" />
+		<Unit filename="modules/h/em_label.h" />
+		<Unit filename="modules/h/em_mesX.h" />
+		<Unit filename="modules/h/flt_arith.h" />
+		<Unit filename="modules/h/print.h" />
+		<Unit filename="modules/h/string.h" />
+		<Unit filename="modules/h/system.h" />
+		<Unit filename="modules/pkg/idf_pkg.body" />
+		<Unit filename="modules/pkg/idf_pkg.spec" />
+		<Unit filename="modules/pkg/inp_pkg.body" />
+		<Unit filename="modules/pkg/inp_pkg.spec" />
+		<Unit filename="modules/src/alloc/Malloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/No_Mem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/Realloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/Salloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/Srealloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/botch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/clear.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/st_alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/alloc/std_alloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/assert/BadAssert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/C_out.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhcst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhdlb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhdnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhfcon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhicon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhilb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhpnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/bhucon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/convert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crcst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crdlb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crdnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crilb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crpnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crscon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/crxcon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/cst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/dfdlb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/dfdnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/dfilb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/dlb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/dnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/em.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/em.nogen" />
+		<Unit filename="modules/src/em_code/em_private.h" />
+		<Unit filename="modules/src/em_code/end.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/endarg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/exc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/failed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/fcon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/getid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/icon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/ilb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/insert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/insert.h" />
+		<Unit filename="modules/src/em_code/internerr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/make.em.gen" />
+		<Unit filename="modules/src/em_code/mkcalls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/msend.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/msstart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/op.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/opcst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/opdlb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/opdnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/opilb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/opnarg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/oppnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/pnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/pro.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/pronarg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/psdlb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/psdnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/pspnam.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/scon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_code/ucon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_data/em_flag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_data/em_mnem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_data/em_pseu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_data/em_ptyp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_com.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_ego.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_emx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_err.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_flt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_gto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_opt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_par.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_reg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_src.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_stb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/em_mes/C_ms_std.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/b64_add.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/b64_sft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_add.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_ar2flt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_arith.h" />
+		<Unit filename="modules/src/flt_arith/flt_chk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_cmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_div.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_flt2ar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_misc.h" />
+		<Unit filename="modules/src/flt_arith/flt_modf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_mul.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_nrm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_str2fl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/flt_umin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/split.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/flt_arith/ucmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/idf/idf_pkg.body" />
+		<Unit filename="modules/src/idf/idf_pkg.spec" />
+		<Unit filename="modules/src/input/AtEoIF.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/input/AtEoIT.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/malloc/malloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/byte_order.h" />
+		<Unit filename="modules/src/object/object.h" />
+		<Unit filename="modules/src/object/rd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/rd_arhdr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/rd_bytes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/rd_int2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/rd_long.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/rd_ranlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/rd_unsig2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr_arhdr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr_bytes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr_int2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr_long.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr_putc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/object/wr_ranlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/print/doprnt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/print/format.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/print/fprint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/print/param.h" />
+		<Unit filename="modules/src/print/print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/print/sprint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/bts2str.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/btscat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/btscmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/btscpy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/btszero.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/long2str.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/str2bts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/str2long.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strcat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strcmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strcpy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strindex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strlen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strncat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strncmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strncpy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strrindex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/string/strzero.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/access.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/break.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/chmode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/close.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/create.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/filesize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/lock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/modtime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/open.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/read.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/remove.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/rename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/seek.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/stop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/unlock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modules/src/system/write.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

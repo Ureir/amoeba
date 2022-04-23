@@ -7,9 +7,8 @@
 
 #include "em_private.h"
 
-
-CC_opcst(opcode, cst)
-	arith cst;
+void
+CC_opcst(int opcode, arith cst)
 {
 	/*	Instruction with a constant argument
 		Argument types: c, d, l, g, f, n, s, z, o, w, r

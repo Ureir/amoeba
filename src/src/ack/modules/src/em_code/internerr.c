@@ -4,8 +4,10 @@
  * See the copyright notice in the ACK home directory, in the file "Copyright".
  */
 #include <system.h>
+#include "em_private.h"
 
-C_internal_error()
+void
+C_internal_error(void)
 {
 	sys_write(STDERR,"internal error\n",15);
 	sys_stop(S_EXIT);

@@ -7,9 +7,8 @@
 
 #include "em_private.h"
 
-
-CC_crcst(op, v)
-	arith v;
+void
+CC_crcst(int op, arith v)
 {
 	/*	CON or ROM with argument CST(v)
 	*/

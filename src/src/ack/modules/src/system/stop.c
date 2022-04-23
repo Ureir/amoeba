@@ -6,9 +6,6 @@
 
 #include <system.h>
 
-#if defined(__STDC__) || defined(AMOEBA)
-extern void abort();
-#endif
 
 sys_stop(how)
 	int how;

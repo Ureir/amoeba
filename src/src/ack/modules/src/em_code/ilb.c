@@ -7,7 +7,7 @@
 
 #include "em_private.h"
 
-
+void
 CC_ilb(l)
 	label l;
 {
