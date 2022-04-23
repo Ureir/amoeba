@@ -23,11 +23,6 @@ mmdf_sparc.tar	   5.70 MB   the binaries for the MMDF II email system
 			   (This should be untarred in super/module)
 x_sparc.tar	  60.12 MB   tar file containing the X Windows binaries
 			   (This should be untarred in super/module)
-aps		  75.75 KB   This is a fixed version of aps.  The April 1996
-			     release of Amoeba contained an incorrect version.
-			     You only need this if you FTP'd Amoeba before
-			     15 July 1996.
-			    Install this in /super/util/aps/pd.sparc
 
 NB. If you are having trouble ftping big files due to flakey network
     connections there is a split version of tapefile.2.Z available.
@@ -56,7 +51,6 @@ Sums:
 06896   175 tapefile.0.sun4m.Z
 39834  1279 tapefile.1.Z
 18386 20554 tapefile.2.Z
-34673    50 aps.Z
 21733  3626 mmdf_sparc.tar.Z
 52465 31427 x_sparc.tar.Z
 30766  1024 Split_tape/tape2.Z.01

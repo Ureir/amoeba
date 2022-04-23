@@ -22,11 +22,6 @@ mmdf_mc68000.tar  4.96 MB   the binaries for the MMDF II email system
 			   (This should be untarred in super/module)
 x_mc68000.tar	 46.01 MB   tar file containing the X Windows binaries
 			   (This should be untarred in super/module)
-aps		 63.42 KB   This is a fixed version of aps.  The April 1996
-			    release of Amoeba contained an incorrect version.
-			    You only need this if you FTP'd Amoeba before
-			    15 July 1996.
-			    Install this in /super/util/aps/pd.mc68000
 
 NB. If you are having trouble ftping big files due to flakey network
     connections there is a split version of tapefile.2.Z available.
@@ -56,7 +51,6 @@ Sums:
 05795 14954 tapefile.2.Z
 55269  2803 mmdf_mc68000.tar.Z
 38629 26840 x_mc68000.tar.Z
-31030    43 aps.Z
 08113  1024 Split_tape/tape2.Z.01
 36141  1024 Split_tape/tape2.Z.02
 57702  1024 Split_tape/tape2.Z.03
